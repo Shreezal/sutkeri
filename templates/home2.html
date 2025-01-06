@@ -1,0 +1,143 @@
+{% extends 'head.html' %} {% load static%} {% block home_head %}
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="static/css/home.css" />
+{% block week_head %}{% endblock week_head %} {% endblock home_head %} 
+{% block home_body %} {% block week_body %} {% endblock week_body %}
+
+
+<div class="homebody" id="body-el">
+  <h1 class="trimester">SECOND TRIMESTER</h1>
+
+  <div class="tables">
+    <div class="table-content">
+      <img src="static/images/second/week14.png" class="week-img" />
+      <p class="week-name">Week 14</p>
+      <p class="week-desc">Your baby is now making expressions with its tiny features.</p>
+    </div>
+    <div class="table-content">
+      <img src="static/images/second/week15.png" class="week-img" />
+      <p class="week-name">Week 15</p>
+      <p class="week-desc">Your baby can move her joints and is forming taste buds.</p>
+    </div>
+
+    <div class="table-content green-table">
+      <img src="static/images/second/week16.png" class="week-img" />
+      <p class="week-name green-name">Week 16</p>
+      <p class="week-desc green-desc">You may be having less nausea and fewer mood swings.</p>
+    </div>
+
+    <div class="table-content">
+      <img src="static/images/second/week17.png" class="week-img" />
+      <p class="week-name">Week 17</p>
+      <p class="week-desc">Your baby's skeleton is changing from soft cartilage to bone.</p>
+    </div>
+
+    <div class="table-content">
+      <img src="static/images/second/week18.png" class="week-img" />
+      <p class="week-name">Week 18</p>
+      <p class="week-desc">
+        Your baby's genitals are developed enough to see on an ultrasound.
+      </p>
+    </div>
+
+    <div class="table-content">
+      <img src="static/images/second/week19.png" class="week-img" />
+      <p class="week-name">Week 19</p>
+      <p class="week-desc">You’re baby’s hair is sprouting on your baby's scalp.</p>
+    </div>
+    <div class="table-content">
+      <img src="static/images/second/week20.png" class="week-img" />
+      <p class="week-name">Week 20</p>
+      <p class="week-desc">
+        Your baby's taste buds are now working.
+      </p>
+    </div>
+  </div>
+  <div class="tables">
+    <div class="table-content">
+      <img src="static/images/second/week21.png" class="week-img" />
+      <p class="week-name">Week 21</p>
+      <p class="week-desc">
+        Feeling your baby move at 21 weeks pregnant?
+      </p>
+    </div>
+    <div class="table-content">
+      <img src="static/images/second/week22.png" class="week-img" />
+      <p class="week-name">Week 22</p>
+      <p class="week-desc">
+        Your baby may be able to hear your heartbeat.
+      </p>
+    </div>
+
+    <div class="table-content green-table">
+      <img src="static/images/second/week23.png" class="week-img" />
+      <p class="week-name green-name">Week 23</p>
+      <p class="week-desc green-desc">
+        Your baby has a well-developed sense of movement.
+      </p>
+    </div>
+
+    <div class="table-content">
+      <img src="static/images/second/week24.png" class="week-img" />
+      <p class="week-name">Week 24</p>
+      <p class="week-desc">Your growing uterus is now the size of a soccer ball.</p>
+    </div>
+
+    <div class="table-content">
+      <img src="static/images/second/week25.png" class="week-img" />
+      <p class="week-name">Week 25</p>
+      <p class="week-desc">
+        Your little one is starting to add some baby fat and grow more hair.
+      </p>
+    </div>
+
+    <div class="table-content">
+      <img src="static/images/second/week26.png" class="week-img" />
+      <p class="week-name">Week 26</p>
+      <p class="week-desc">Your baby is inhaling and exhaling small amounts of amniotic fluid. </p>
+    </div>
+    
+    <div class="table-content">
+        <img src="static/images/second/week27.png" class="week-img" />
+      <p class="week-name">Week 27</p>
+      <p class="week-desc">You’re baby is opening and closing his eyes and even sucking his fingers. </p>
+    </div>
+  </div>
+<a href="{% url "home1 page" %}"><div class="previous_page">
+    <img src="static/images/previous.png" class="previous-img" />
+  </div></a>
+
+  <a href="{% url "home3 page" %}"><div class="next_page">
+    <img src="static/images/next.png" class="next-img" />
+  </div></a>
+
+
+  <div class="footer">{% for item in health_data %}
+    {% if forloop.last %}
+        <span>This Week:  </span>&nbsp;<span>Systolic_BP: </span>{{ item.Systolic_BP }}<span>mmHg</span> &nbsp;<span>Diastolic_BP: </span>{{ item.Diastolic_BP }}<span>mmHg</span>&nbsp; <span>Blood Sugar: </span>{{ item.Blood_Sugar }}<span>mmol/l</span> &nbsp;<span>Body Temperature: </span>{{ item.Body_Temperature }}<span>°F</span>&nbsp;<span>Calculaed Risk: </span>{{val}}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <script src="static/js/home.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
+</div>
+{% endblock home_body %}
